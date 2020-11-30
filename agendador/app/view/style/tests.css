@@ -1,0 +1,19 @@
+.vertical-center {
+
+	margin-top: 25%;
+	transform: translateY(-50%);
+}
+
+.horizontal-center {
+	position: relative;
+	margin-left: -50%;
+	transform: translateX(50%);
+}
+
+.no-roll {
+  overflow: hidden;
+}
+
+.horizontal-no-roll {
+ overflow-x: hidden;
+}

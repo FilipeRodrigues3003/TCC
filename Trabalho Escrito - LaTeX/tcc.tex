@@ -1,0 +1,172 @@
+\documentclass[	
+	12pt,								
+	openany,               						
+	oneside,			
+	a4paper,
+	abnt,						
+	chapter=TITLE,						
+	sumario=abnt-6027-2012,	 	
+	english,										
+	brazil												
+]{faeterj-rio-abntex2}		
+
+
+
+% --------------------------------------------------------------------
+%
+%            			INICIO DO DOCUMENTO 
+%
+% --------------------------------------------------------------------
+
+\begin{document}
+    % \citebrackets[]
+    \citeoption{abnt-full-initials=yes}
+    
+    \pagestyle{empty}
+	\selectlanguage{brazil}						%
+	\frenchspacing								%
+	\pretextual									%
+	\imprimircapa								%
+	\imprimirfolhaderosto*						%
+
+    %\imprimirfichacatalografica
+    %{666.555}  % esse número deve ser montado com a ajuda da biblioteca do IME
+    %{S455h}
+    %{Silva, F., Tal, C.} % <último nome>, <abreviação do primeiro nome>
+    %{Projeto de Fim de Curso (PFC)}
+    %{%
+    %  1. Curso de engenharia da computação - Projeto Final de Curso.
+    %  2. Um Assunto.
+    %  3. Outro Assunto.
+    %  I. Silva, Cilano.
+    %  II. Beltrano, Fulano.
+    %  III. \@title.
+    %  IV. Instituto Militar de Engenharia.}
+     %{Técnicas de blablabla}
+	% --------------------------------------------------------------------
+	% Insira abaixo os elementos prétextuais
+	% 	como: folha de aprovação, dedicatória, agradecimentos, epigrafe,
+	% 	resumo e listas de ilustrações, tabelas, siglas e simbolos.
+	% --------------------------------------------------------------------
+	\include{TCC/capitulos/01.ficha_catalografica}
+	% \include{TCC/capitulos/02.folha_de_aprovacao}
+	
+	% dedicatória
+	
+	% agradecimentos
+	
+	% epigrafe
+	\include{TCC/capitulos/03.epigrafe}
+	
+	% resumo 
+	 \include{TCC/capitulos/04.resumo}
+	 
+	% -----------------------------------------------
+	%          Sumário (Não Altere)
+	% -----------------------------------------------
+	\pagestyle{simple}											%
+    \stepcounter{tocdepth}	
+    \pdfbookmark[0]{\listfigurename}{lof}
+    \listoffigures*
+    \cleardoublepage
+    \pdfbookmark[0]{\listtablename}{lot}
+    
+    % Siglas
+    \include{TCC/capitulos/05.siglas}
+    % Símbolos
+    
+    \listoftables*
+    \cleardoublepage
+ 	\pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage								%
+ 	%\settocdepth{section}						%
+ 	\cleardoublepage
+	% ------------------------------------------------
+	%               Fim do Sumário
+	% ------------------------------------------------
+
+	\textual									%
+	% --------------------------------------------------------------------
+	% Insira abaixo os capitulos da sua parte textual 
+	% como: Introdução e os capitulos referentes ao desenvolvimento do trabalho
+	% --------------------------------------------------------------------
+	
+	\include{TCC/capitulos/1.introducao}
+	
+	%\part{Proposta de Desenvolvimento e Metodologia}
+ 	\phantompart
+ 	
+ 	\include{TCC/capitulos/2.problema}
+    
+    %\include{capitulos/modelagem} 
+    %definições de como foi modelado matematicamente o problema
+    
+ 	\include{TCC/capitulos/3.grafos}
+ 
+	% \include{capitulos/mod_mat}
+
+	%\part{Informações Técnicas do Software}
+    \include{TCC/capitulos/5.sistema}
+	
+	
+
+    % \include{capitulos/algoritmo}
+
+	% \include{capitulos/resultados}
+
+
+
+	 \phantompart								%
+	% --------------------------------------------------------------------
+	% Insira abaixo o capitulo de Conclusão do Trabalho
+	%
+	% --------------------------------------------------------------------
+
+
+	%\part{Considerações Finais}
+    \include{TCC/capitulos/6.trab_futuros}
+ 
+	 \include{TCC/capitulos/7.conclusao}
+ 
+   
+
+ 	\postextual									%
+ 	% --------------------------------------------------------------------
+ 	% Insira abaixo os capítulos pós-textuais do seu trabalho
+ 	% como: bibliografia, apêndices e anexos
+ 	% --------------------------------------------------------------------
+    
+ 	% para inserir bibtex -> \bibliography{localdoarquivo/nomedoarquivo} (não coloque extensão)
+    
+    \nocite{poulsen13,rocha13,gotlieb63,wren96,schaerf99,santos07,poulsen12,burke95a,garey79,dwerra95,ross95,burke95b,cormen14,page-jones01,larman00,fowler07,sommerville11,pressman11,szwarcfiter94,szwarcifter86,sedgewick,feofiloff11,yoshiko12,vredeveld_02,goldbarg_12,goldbarg_15,heuser09}
+   
+   \nocite{bezerra2007principios, biajolinovas, borges2003resoluccao, brucker2007, burke2010decomposition, burke2002recent, burke2007practice, cacchiani2013tutorial, cerioli2012minicurso, richard1967theory, cormen2001, csima1964, da2010heuristicas, daalgoritmo, diverio2009teoria, eiselt2013decision, elmaghraby2012symposium, feofiloff2011minicurso, klein1994algoritmos, knuth1997stable, kostuch2004hardness, levitin2012introduction, martin2019codigo, menezes2017formulaccoes, sipser2007introduccao, monteiro2017heuristicas, muhlenthaler2015fairness, neufeld1974graph, oliveira2011timetabling, pereira2017inserccao, pinedo2005planning, pinedo2012scheduling, reis2006introduccao, rodrigues2008tratamento, schmidt1980timetable, werner2018special}
+	\bibliography{referencias/referencias}
+ 	
+ 	 % ---------------------------------------------------------
+	% Apêndices
+	% ---------------------------------------------------------
+ 	
+ 	\include{capitulos/apendice.questionario}
+ 	
+    % ---------------------------------------------------------
+	% Anexos
+	% ---------------------------------------------------------
+
+ 	% \include{capitulos/anexo}
+     \include{capitulos/anexo.manual}
+   
+    % -------------------------------------------------------------
+	% Índice Remissivo
+	% -------------------------------------------------------------
+ 	 \phantompart								%
+	\printindex									%
+ 	
+\end{document}
+
+% --------------------------------------------------------------------
+%
+%							FIM DO DOCUMENTO
+%
+% --------------------------------------------------------------------

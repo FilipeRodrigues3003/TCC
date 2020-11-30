@@ -1,0 +1,50 @@
+\chapter{Resultados Obtidos e Trabalhos Futuros}
+\label{cap:resultados}
+
+% \section{Conclusão da Pesquisa Realizada}
+Este trabalho visou obter o melhor resultado possível considerando as turmas, seus alunos e a quantidade de horários disponíveis na instituição para realização das provas. Dessa forma foi apresentado tanto conceitualmente quanto de forma prática, nos resultados da aplicação proposta, a melhor alocação e suas possíveis consequências. Permitindo dessa forma, que ajustes por parte do usuário sejam realizadas sobre as provas de segunda chamada naquele cenário em específico.
+
+Apresentamos formalmente neste trabalho o problema de programação de horários de exames universitários com suas respectivas classificações e restrições, demonstramos também a modelagem matemática para o problema e propomos um algoritmo capaz de obter uma solução adequada para as condições estabelecidas, além de ofertar essa solução na forma de um sistema que permite a busca pela resolução de forma automática e amigável para qualquer usuário.
+
+% Foi utilizada a estrutura matemática da Teoria dos Grafos para modelar o problema, mais especificamente de Grafos de Interseção e Coloração de Vértices. Este modelo nos permitiu a utilização de um enorme acervo de pesquisas e publicações sobre o tema. 
+
+Com o desenvolvimento de uma solução computacional, foi possível automatizar o processo de busca por soluções, facilitando o trabalho das pessoas e principalmente, permitindo-as obter uma melhor solução com uma expressiva redução no tempo de busca, em comparação com métodos manuais. 
+
+Visando o desenvolvimento de um produto amigável para o usuário final (\emph{user-friendly}), foi um objetivo desse trabalho tornar transparente a utilização de abstrações, estruturas e modelos matemáticos, atendendo aos fundamentos de simplicidade, compatibilidade, navegabilidade e reusabilidade a fim de permitir o emprego futuro deste trabalho em pesquisas de natureza similar.
+
+%  \section{Metodologia Cientifica Utilizada}
+
+% \begin{enumerate}
+%    \item Finalidade - Pesquisa Aplicada
+%    \item Objetivos - Descritiva
+%    \item Abordagem - Quantitativo
+%    \item Método - Hipotético-dedutivo
+%    \item Procedimentos - Bibliográfico, Experimental e Estudo de Caso
+% \end{enumerate}
+
+Em nossa pesquisa utilizamos a abordagem quantitativa, onde realizaríamos um teste de usabilidade a fim de validar nosso protótipo desenvolvido. Usaríamos como instrumento de coleta de dados um questionário, com 25 perguntas. Na elaboração das perguntas, procuramos investigar o conhecimento dos usuários sobre sua área de atuação profissional, a fim de detectar possíveis usuários finais, o conhecimento prévio do usuário sobre o tema, sua facilidade em identificar as funcionalidades do sistema e sua consequente utilização.
+
+O instrumento não foi aplicado aos usuários na forma de um teste de usabilidade no ano de 2020, devido a limitações causadas devido as restrições distanciamento social impostas em meio a pandemia de Covid-19 causada pelo vírus Sars-Cov2, popularmente conhecido como Coronavírus.  Os usuário responderiam ao questionário em forma de entrevista enquanto realizariam o teste do sistema de forma guiada, na qual deveriam seguir instruções recebidas durante a utilização do sistema.
+
+Contudo, o roteiro desenvolvido para a aplicação dos testes de usabilidade está disponível em apênce do trabalho e poderá ser aplicado juntamente as adequações observadas em \textbf{Trabalhos Futuros}.
+% Através dos procedimentos de análise dos dados, chegamos aos gráficos apresentados a seguir, onde podemos observar as respostas mais comuns para as perguntas realizadas e identificar assim os problemas mais relatados e a percepção do uso da aplicação por usuários comuns.
+
+% \section{Resultados dos Testes de Interface}
+
+
+
+
+ \section{Trabalhos Futuros}
+
+% ---
+
+Segundo pesquisa realizada pelo \citeonline{ceticbr19}, 99\% da população brasileira que possuía acesso à “internet” tinha um aparelho celular em 2019, sendo que, para 58\% da população com acesso à “internet”, o aparelho celular era o único meio para se conectar a rede. Considerando informações desse gênero, fica evidente à necessidade de se criar futuramente adequações no protótipo visando atingir um público mais amplo.
+
+Para que seja possível deixar o protótipo totalmente funcional em “smartphones”, será necessário realizar algumas adaptações na “interface” da aplicação, aumentando sua responsividade e adicionando mais ações para os eventos disparados ao pressionar sobre a tela do dispositivo, que são diferentes dos \emph{cliques} com o cursor do mouse. Dessa forma, tornar o protótipo inicial em um produto multiplataforma, sem perder seu propósito e funcionamento.
+
+Visando obter um melhor desempenho, é interessante a realização de uma pesquisa para implementar outros métodos Heurísticos propostos na literatura, tanto para o problema de programação de horários de exames universitários, quanto expandi-los para problemas de escalonamento de horários de aulas com devidas adaptações. Dessa forma pretendemos comparar os diferentes resultados e desempenhos obtidos com cada proposta, visando ao final, utilizar desse conhecimento para, quem sabe, propor uma nova heurística específica que resolva o problema apresentado neste trabalho.
+
+ Após a criação e implementação dessa heurística pretendemos a comparar seus resultados com demais heurísticas, caso ela se demonstre promissora, será um desejo utilizar instâncias de dados realistas para realizar testes. Para isso uma base de dados postulante seriam os dados do \emph{International Competition Timetabling} ou ICT, que se trata de uma competição internacional para avalizar algoritmos heurísticos (em grande parte) no processo de resolução do problema clássico de \emph{Timetabling}, que é alocar professores, turmas e salas em horários específicos dadas uma série de restrições utilizando uma base real de dados de uma determinada instituição universitária.
+
+Apesar de o problema estudado no trabalho e o problema de alocação de professores em salas de aula, juntamente as suas turmas e horários serem similares em natureza, será necessário alterar sutilmente algumas informações, e acrescentar uma informação a base de dados, será necessário inicialmente retirar da modelagem os professores e suas restrições, as salas de aula e suas restrições, entre outras, e incluir o número máximo de horários de prova que aquele conjunto de turmas poderá fazer, para dessa forma ser possível utilizar uma base de dados real para submeter as heurísticas a testes e de acordo com seus resultados, buscar aplicá-las em problemas parecidos.
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <link rel="stylesheet" href="src/bootstrap.min.css" />
+        <link rel="stylesheet" href="src/roboto.css" />
+        <link rel="stylesheet" href="src/icon.css" />
+        <link rel="stylesheet" href="style/main.css" />
+		<link rel="stylesheet" href="style/tests.css" />
+		
+		<title>Error</title>
+	</head>
+	<body class="bg-erro">
+		<div class="container ">
+			<div class="alert alert-danger" role="alert">
+				Ocorreu um erro ao executar a operação!
+			</div>
+			<div style="text-align: center;padding: 40px;">
+				<h2>Selecione uma ação</h2>
+				<div class="btn-group">
+					<button
+						type="button"
+						class="btn btn-lg btn-success "
+						onclick="alocar();"
+					>
+						Alocar Turmas nos Horários
+					</button>
+					<button
+						type="button"
+						class="btn btn-lg  btn-info"
+						onclick="gerenciar();"
+					>
+						Gerenciar Turmas
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="JS/route.js"></script>
+	</body>
+</html>

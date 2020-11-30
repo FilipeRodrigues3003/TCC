@@ -1,0 +1,71 @@
+<div class="modal fade " id="contatoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  " id="teste" role="document" > 
+	    <div class="modal-content  " style="top: 0%; left: 0%; transform: translate(0%, 0%); width: 100%; padding: 0; margin:0;"> 
+	        <div class="card ">
+	            <div class="modal-header card-header bg-info text-white text-center border-info">
+	                <h4 class="modal-title ">Contate-nos</h4>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+		              <span aria-hidden="true">&times;</span> 
+		            </button> 
+                 </div>
+                 <div class="modal-body card-body">
+                    <form class="was-validated" action="../controller/mail.php" method="post">
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div class="form-group">
+                                     <label for="nome-send">Seu nome e sobrenome</label>
+                                    <div class="input-group mb-2" id="nome-send">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="material-icons">
+                                                account_box
+                                                </i></div>
+                                        </div>
+                                        <input type="text" class="form-control is-invalid" id="nome" name="nome" placeholder="" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                     <label for="mail-send">Seu email</label>
+                                    <div class="input-group mb-2" id="mail-send">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="material-icons">
+email
+</i></div>
+                                        </div>
+                                        <input type="email" class="form-control is-invalid" id="email" name="email" placeholder="exemplo@mail.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mensagem">Sua mensagem</label>
+                                    <div class="input-group mb-2" id="mensagem">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="material-icons">
+message
+</i></div>
+                                        </div>
+                                        <textarea class="form-control is-invalid" id="mensagem" name="mensagem" placeholder="" required></textarea>
+                                       
+                                       </div>
+                                </div>
+                                <div class="invalid-feedback">
+                                      Por favor informe sua mensagem.
+                                    </div>
+                               
+                            </div>
+
+                        
+                      
+                </div>
+            </div> 
+		    
+	      <div class="modal-footer bg-light"> 
+	       
+                   <input type="submit" value="Enviar" class="btn btn-info btn-lg">
+                              
+		    </form>
+	      </div> 
+	    </div> 
+    </div>
+</div>

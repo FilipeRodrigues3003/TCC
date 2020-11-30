@@ -1,0 +1,82 @@
+\chapter*[Introdução]{Introdução}
+\setcounter{chapter}{1}
+\addcontentsline{toc}{chapter}{INTRODUÇÃO}
+\pagestyle{simple}
+% ----------------------------------------------------------
+
+
+% \section{Apresentação Geral}
+
+Os problemas de programação de horários vem sendo estudados desde o início da década de 60, são problemas cotidianos e muitas vezes de difícil resolução. A dificuldade surge devido à natureza combinatória do problema, o que demanda grande esforço e tempo para se solucionar manualmente em alguns casos. Para isso é comum se propor soluções computacionais que sejam capazes de buscar a melhor programação dos horários no menor tempo e com menor esforço possível.
+
+Para permitir a utilização de computadores na resolução de um problema cotidiano, precisaremos realizar um processo de modelagem na qual transformaremos o problema real em um problema de computador, e a partir desse momento utilizaremos os algoritmos, possibilitando que o computador execute uma série de instruções específicas de forma sequencial. 
+
+Este trabalho apresentará o processo de modelagem e confecção de um protótipo de sistema para solucionar um clássico problema de natureza combinatória, observado em universidades.
+
+% \section{Problema Geral}
+Apresentaremos ao longo deste trabalho uma proposta de resolução para o \textbf{Problema de Programação de Horários de Exames em Universidades} (PPHEU), nomeado por \citeonline{schaerf99} e se caracteriza por ser de difícil resolução manual e bastante estudado por pesquisadores da área.
+
+A aplicação de exames, provas ou avaliações em universidades, se torna um problema de natureza combinatória em algumas circunstâncias, e caso isso venha a ocorrer, encontrar uma solução perfeita pode ficar até mesmo impossível em alguns cenários. Nesses casos é recomendável a busca da melhor solução possível, maximizando (ou minimizando) determinado aspecto dela visando encontrar uma solução ótima através dessa otimização.
+
+Os problemas de programação de horários de exames universitários foram vastamente estudados em trabalhos como os de \citeonline{kiaer92}, \citeonline{socha03}, \citeonline{lai08}, \citeonline{burke10} entre outros, onde são utilizadas diversas formas de modelagem e métodos de solução, contudo foram os trabalhos de \citeonline{brown87}, \citeonline{vredeveld_02} e \citeonline{scheeren18} que utilizaram as formas de modelagem ou solução mais similares as apresentadas neste trabalho.
+
+% \section{Problema Específico}
+
+A \textbf{programação de horários de exames universitários}, consiste na criação de uma tabela de horários para que diversas turmas de uma universidade realizem suas provas semestrais. Contudo, condições adicionais podem ser destacadas, por afetarem consideravelmente a solução e por consequência o resultado obtido.
+
+Inicialmente, deve-se compreender turma em um contexto universitário, isto é, uma turma está diretamente relacionada a uma única disciplina ofertada semestralmente, e que seus alunos podem ou não integrarem ela, de acordo com o interesse do aluno e das normas da instituição. Com isso, temos um ambiente onde duas turmas podem ou não ter alunos em comum.
+
+Ao estipularmos o horário em que uma turma deverá realizar uma prova, deveremos considerar que se duas, ou mais, turmas com alunos em comum realizarem seus exames de forma simultânea, os alunos terão avaliações em diferentes turmas no mesmo horário, com isso serão prejudicados e deverão realizar a segunda chamada dos exames que não puderam fazer em decorrência da alocação dos horários.
+
+Caso uma instituição possua uma quantidade limitada de horários para a realização das provas, poderá não ser possível realizar a programação dos exames de forma a nenhum aluno ser prejudicado por conflitos nos horários de prova, assim buscaremos minimizar o número de provas de segunda chamada necessárias.
+
+
+% \section{Objetivos Gerais}
+
+Este trabalho trará uma abordagem em que se obtém o melhor resultado possível considerando as turmas, seus alunos e a quantidade de horários de provas disponíveis na instituição. Será apresentado conceitualmente e de forma prática na aplicação proposta, a melhor alocação e suas possíveis consequências, permitindo dessa forma, que sejam realizadas as aplicações das provas de segunda chamada.
+
+
+
+% \section{Objetivos Específicos}
+
+
+
+% Mesmo possuindo grande base conceitual e propostas de algoritmos que solucionam o problema, não foi proposto em nenhum desses trabalhos uma solução para um usuário final, considerando a utilização da solução por um leigo na parte matemática e algorítmica.
+
+
+O objetivo deste trabalho é apresentar formalmente o problema de programação de horários de exames universitários com suas respectivas classificações e restrições, demonstrar a modelagem matemática para o problema e propor um algoritmo capaz de obter a melhor solução, além de apresentar um sistema que permita a busca pela resolução de forma automática e que seja amigável para qualquer usuário.
+
+A \textbf{modelagem do problema} utilizará das estruturas matemáticas da \textbf{Teoria dos Grafos}, mais especificamente de \textbf{Grafos de Interseção} e \textbf{Coloração de Vértices}. Este modelo nos beneficiará com um enorme acervo de pesquisas, assim como observado em \citeonline{carlson66}, \citeonline{bondy78}, \citeonline{brown96}, \citeonline{kann97} e \citeonline{leung04}, que ajudam a facilitar a abordagem sobre tema, além de nos proporcionar uma adequação simplificada do modelo conceitual em um protótipo funcional.
+
+Com o desenvolvimento de uma solução computacional, poderemos automatizar o processo de busca por soluções, permitindo obter uma solução com uma expressiva redução no tempo de busca em comparação com métodos manuais. 
+
+O problema de programação de horários de exames universitários, pertence à família de problemas bem conhecidos  na computação e matemática, os \textbf{problemas de tabela de horários} (também conhecidos como \emph{Timetabling} ou \emph{Timetable}). 
+
+Existem alguns exemplos de implementações amigáveis para o usuário final (\emph{user-friendly}), voltadas para o \emph{Timetabling} como, por exemplo, o “\textbf{Cronos}”\ de \citeonline{cronos20}, o “\textbf{GridClass}”\ de \citeonline{gridclass20} e o “\textbf{Urânia}”\ de \citeonline{urania20} sendo todos estes voltados para o problema de programação de horários escolares, onde, de forma simplificada, busca-se alocar professores e alunos em salas, em horários específicos, para a realização das aulas.
+
+% \section{Metodologia / Estratégia}
+
+% A documentação do processo, partindo da identificação de um problema de natureza combinatória até o desenvolvimento de um produto amigável para um usuário final, por meio da utilização de abstrações, estruturas e modelos matemáticos, não é comum em trabalhos de conclusão da instituição, contudo, visando uma maior disseminação dessas informações no âmbito da instituição e possibilitar a (re)utilização futura de partes deste trabalho em outros problemas de natureza similar decidimos seguir por este caminho.
+
+% \section{Organização do Trabalho}
+
+% Para desenvolver um “software” seja capaz de resolver o problema, mantendo sua simplicidade e sendo intuitivo ao máximo para os usuários finais, o problema deve estar bem estruturado, para que a solução encontrada por meio da aplicação seja satisfatória tanto do ponto de vista do usuário, quanto do ponto de vista conceitual. Com isso, iniciaremos a partir da análise do problema cotidiano, por consequência o problema do usuário, a quem se destinará a aplicação.
+
+Este trabalho está organizado da seguinte forma.
+
+No capítulo \ref{cap:problema} são apresentados os \textbf{Problemas de Escalonamento de Horários}, sua origem e suas subdivisões, incluindo a que pertence o problema de programação de horários de exames universitários.
+
+No capítulo \ref{cap:modelagem} é demonstrada a \textbf{Modelagem Matemática}, apresentando fundamentos sobre Teoria dos Grafos e a forma pela qual os grafos de interseção foram utilizados.
+
+No capítulo \ref{cap:solucao} é apresentado o \textbf{Método de Solução} que explica a forma pela qual utilizamos a modelagem apresentada no capítulo anterior para resolver o problema e os algoritmos propostos para isso.
+
+No capítulo \ref{cap:software} está a \textbf{Documentação UML} relativa à aplicação desenvolvida, com as tecnologias usadas, metodologias e especificações do “software”.
+
+No capitulo \ref{cap:resultados} estão descritos os \textbf{Resultados Obtidos} com o desenvolvimento do trabalho e são apresentadas as motivações e objetivos para os \textbf{Trabalhos Futuros}.
+
+Por fim é apresentada no capítulo \ref{cap:conclusao} as \textbf{Considerações Finais} acerca do trabalho desenvolvido, as \textbf{Limitações de Pesquisa} observadas ao decorrer do trabalho e as \textbf{Recomendações para Pesquisas Futuras}, onde são apresentadas as recomendações para futuros estudos e trabalhos de motivação similar ao apresentado.
+
+Em apêndice \ref{cap:roteiro} está descrito o roteiro para realização de um teste de usabilidade do sistema proposto, onde busca-se observar se os objetivos do desenvolvimento foram atingidos juntamente a usuários reais.
+
+No anexo \ref{cap:manual} está o \textbf{Manual} para instalação e utilização do protótipo criado com base nas especificações do capítulo \ref{cap:software}, enquanto o anexo \ref{cap:resultado} apresenta um exemplo do \textbf{Relatório} sobre o resultado emitido pelo protótipo ao final da resolução do problema.
+

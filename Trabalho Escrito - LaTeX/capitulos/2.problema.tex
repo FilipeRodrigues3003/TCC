@@ -1,0 +1,116 @@
+\chapter{Problemas de Escalonamento de Horários}
+\pagestyle{simple}
+\label{cap:problema}
+
+% ---
+%
+% ---
+% A descrição do problema será voltada para o leitor leigo no assunto, onde será apresentado o problema, e o objetivo de se realizar um estudo sobre esse problema e qual a finalidade do mesmo.
+%
+% Versão atual da descrição: 2018/12/26 - 1.1.0 - Não revisada
+% ----
+% Problema de Agendamento (Scheduling)
+Problemas de escalonamento de horários (\textit{scheduling}), são problemas amplamente estudados na matemática e computação, são tidos como problemas clássicos de otimização combinatória. Resumidamente, \citeonline{wren96} define esses problemas como: agendar recursos em horários, respeitando condições prévias, de forma a minimizar o custo total de algum conjunto de recursos utilizados. 
+
+O problema de escalonamento é vastamente explorado na literatura por ser aplicável a muitas situações que envolvam alocar um ou mais recursos (como pessoas, veículos, maquinário, processadores e etc) em um quadro limitado de horários, onde se deseja maximizar (ou minimizar) alguma característica da solução que esteja em função de algum recurso, sem violar as regras inerentes ao problema enunciado. Na literatura muitas classes de sub-problemas de escalonamento são apresentados, dentre essas, uma que se destaca é o Problema de Programação de Horários (PPH), também chamado de \textit{timetabling}.
+
+
+\section{Timetabling}
+
+% Apresentar o Timetabling
+O PPH foi primeiramente apresentado por \citeonline{gotlieb63}, demonstrando o problema de alocar professores, turmas e salas em determinados horários de aula, de forma a não se ter um mesmo professor em duas salas em um mesmo horário ou dois professores em uma mesma sala simultaneamente. 
+
+O PPH é definido por \citeonline{wren96} como sendo a atribuição, sujeita a restrições, de recursos a eventos dispostos em quantidade de espaço e tempo limitados, visando satisfazer da melhor forma um conjunto de objetivos estabelecidos. Contudo, essa atribuição pode vir a possuir um alto grau de complexidade de acordo com as restrições e os objetivos a serem atingidos. 
+
+% Tipos de Timetabling
+Existe um grande volume de informações referentes ao PPH, sendo apresentadas formas de solução, aplicação e classificação. Em \citeonline{rocha13} os problemas de PPH são classificados de acordo com suas aplicações, podendo ser: Escalas de Trabalhadores (\textit{Employee Timetabling}), Escalas de Condutores de Veículos de Transporte (\textit{Transportation Timetabling}), Escalas de Jogos de Competições Esportivas (\textit{Sports Timetabling}), Educacional (\textit{Educational Timetabling}).
+
+
+\subsection{Problemas de Programação de Horários Educacionais (\textit{Educational Timetabling})}
+
+% Apresentar os Educacionais
+Os PPH Educacionais são os problemas cujas características (restrições e recursos) são semelhantes a situações enfrentadas em instituições de ensino, como em definir o quadro de aulas, calendário de provas universitárias, distribuição de turmas em salas de aula entre outros. Segundo \citeonline{santos07}, os PPH da área educacional podem ser especificados em três categorias: Problemas Programação de Horários em Escolas (PPHE),  Problemas Programação de Horários de Cursos (PPHC) e Problemas de Programação de Horários de Exames em Universidades (PPHEU). 
+
+Em \citeonline{schaerf99} pode ser observada a seguinte classificação:
+
+\begin{itemize}
+\item PPHE: A programação semanal para todas as classes de uma escola, evitando que os professores possuam duas aulas ao mesmo tempo, e vice-versa;
+\item PPHC: A programação semanal de todas as palestras de um conjunto de disciplinas universitárias, minimizando as sobreposições de palestras de disciplinas que possuem alunos comuns;
+\item PPHEU: O agendamento para os exames de um conjunto de disciplinas universitárias, evitando a sobreposição de exames de cursos com alunos comuns, e evitando, o melhor possível, que os alunos tenham exames muito próximos.
+\end{itemize}
+
+
+% Classificação do problema
+Os PPH Educacionais estão entre os problemas mais difíceis da área de otimização combinatória. Podendo ainda serem aplicadas inúmeras novas restrições a problemas já enunciados, de modo a tornar o resultado obtido o mais próximo do ideal e/ou do mundo real, entretanto a dificuldade de se encontrar a melhor solução possível aumenta.
+
+Em \citeonline{schaerf99} é visto que os PPH Educacionais são classificados como NP-Completo para a maioria das formulações. Dessa forma, a solução exata em curto tempo de execução só pode ser garantida para instâncias pequenas, que muitas vezes podem não corresponder à realidade da maioria das instituições de ensino.
+
+\section{Problema de Programação de Horários de Exames em Universidades}
+\label{subsec:desc_prob}
+% !!! Descrever o problema
+O problema consiste em definir horários de provas para diferentes turmas universitárias. Sendo uma turma universitária relacionada a apenas uma disciplina, diferente do contexto escolar, em que uma turma tem diversas disciplinas.
+
+% !!! Descrever as restrições
+Um mesmo aluno pode pertencer a diferentes turmas, dessa forma para que ele possa realizar suas provas, busca-se evitar a atribuição em um mesmo horário de diferentes avaliações para um mesmo aluno. Caso não seja possível criar uma grade de horários sem prejudicar nenhum aluno, sendo permitida a realização de avaliações de segunda chamada para aqueles que possuírem duas ou mais provas em um mesmo horário. 
+
+Com isso deseja-se alocar as provas em horários buscando o menor número de avaliações de segunda chamada possível.
+
+Neste trabalho iremos considerar esse problema como um problema de programação de horários de cursos universitários (PPHC). Que \citeonline{schaerf99} define como um problema semelhante ao de definir horários de exames (PPHEU), contudo, ele adverte que em situações onde as turmas são heterogêneas, o comum é definir o problema como um PPHC, onde os cursos (ou palestras) serão tratados como horários de avaliações.
+
+\section{Criação de Horários de Exames em Universidades}
+
+Uma solução trivial para o problema consistiria em ter um número de horários para realização da prova maior ou igual à quantidade de turmas. Com isso bastaria atribuir cada turma a um horário e não haveria nenhuma sobreposição e por consequência nenhuma prova de segunda chamada.
+%% Inserir imagem apresentação
+%%      --- Solução Trivial
+
+Contudo, este trabalho focará em explorar as situações onde uma solução trivial não possa ser adotada. Isto é, quando a quantidade de turmas for maior que o número de horários disponíveis.
+
+%% Inserir imagem apresentação
+%%      --- Solução Não Trivial
+
+Nesse cenário algumas turmas terão que, obrigatoriamente, compartilharem o mesmo horário de prova. Dessa forma, caso duas turmas possuam alunos em comum, a aplicação da prova de segunda chamada seria necessária para os alunos prejudicados.
+
+Com isso o trabalho irá explorar como identificar as turmas com alunos em comum, de modo a minimizar a alocação em um mesmo horário dessas turmas. Dessa maneira minimizar a quantidade de provas de segunda chamada.
+
+
+
+
+
+\section{Variações do problema}
+
+No decorrer da pesquisa para realização deste trabalho, alguns problemas foram analisados (e consequentemente modelados) e pôde-se notar uma similaridade entre suas características.
+
+Acreditamos que existam outros problemas que tenham características similares à estes apresentados, com isso a proposta de solução algorítmica (apresentada no \textbf{capitulo \ref{cap:solucao}}), visará resolve-los independente da descrição, obtendo resultados com a mesma qualidade.
+
+
+
+\subsection{Alocação de Bandas em dias de um festival}
+% !!! Descrever o problema
+Um evento de música popular visa reunir diversos artistas, músicos independentes e amadores para se apresentar em diferentes palcos e horários. 
+
+% !!! Descrever as restrições
+Muitas bandas possuem membros em comum (definidos aqui como: um conjunto de pessoas que integrem a parte artística uma apresentação, seja instrumentista, dançarino, um técnico ou outros). Deseja-se evitar que muitas bandas sejam prejudicadas com a alocação de seus membros em diferentes palcos em um mesmo horário, pois, isso causaria um desfalque em uma das bandas.
+
+Caso não seja possível evitar todos os desfalques, deve-se minimizar eles para que o festival ocorra do melhor modo possível.
+
+\subsection{Escalas de Equipes em uma Companhia Aérea}
+% !!! Descrever o problema
+Uma companhia aérea separa seus comissários em diferentes equipes, podendo um comissário de voo estar em mais de uma equipe, a empresa deseja organizar os grupos a trabalhar em seus voos de forma que as equipes possam trabalhar com a menor quantidade de desfalques possível.
+
+% !!! Descrever as restrições
+Caso um comissário faça parte de uma ou mais equipes escaladas em um mesmo dia, esse desfalcará as demais equipes, pois, só poderá estar em um único voo, e um substituto deverá ser contratado para completar o grupo.
+
+Deseja-se distribuir as equipes em diferentes voos buscando-se minimizar a quantidade de desfalques, e por consequência, contratações de substituintes.
+
+\subsection{Distribuição de Recursos Militares}
+% !!! Descrever o problema
+Em uma operação militar existem diversos recursos, como equipamentos, armamentos, munições e especialistas, que devem ser distribuídos de melhor forma possível visando garantir o sucesso da missão.
+
+% !!! Descrever as restrições
+Ao se distribuir soldados em operações em diferentes lugares, busca-se formar separar as unidades militares de forma que subunidades sejam capazes de atuar de forma simultânea. Um soldado dessa forma é preparado para poder atuar em diferentes grupos caso seja necessário.
+
+Quando diferentes operações demandam o destacamento das subunidades o oficial deve designar os soldados de forma a manter os grupos o mais coesos e similares aos grupos com os quais os soldados já realizaram treinamento.
+
+Dessa maneira, um soldado de uma unidade pode pertencer a qualquer uma das subunidades com a qual já realizou treinamento, e caso seja designado a realizar uma operação com esse grupo, irá desfalcar os demais.
+
+Deseja-se buscar uma distribuição das subunidades de forma que ocorra o menor número possível de desfalques nas operações. Visando concluir da melhor forma a missão recebida.
