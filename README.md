@@ -4,7 +4,7 @@
 
 Trabalho desenvolvido por Filipe Rodrigues Cardoso da Silva para obtenção da graduação no Curso Tecnólogo em Analise de Sistemas Informatizados da FAETERJ-Rio (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro).
 
-| [DETALHES](#utilizando) | [ORGANIZAÇÃO DO REPOSITÓRIO](#repositorio)  | [CONTATO](#Contato)  |
+| [DETALHES](#utilizando-coloração-de-grafos-de-interseção-para-resolver-o-problema-de-programação-de-horários-de-exames-em-universidades) | [ORGANIZAÇÃO DO REPOSITÓRIO](#repositório-no-github)  | [CONTATO](#Contato)  |
 | :------------: | :-------------: | :------------: |
 
 
