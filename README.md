@@ -4,8 +4,8 @@
 
 Trabalho desenvolvido por Filipe Rodrigues Cardoso da Silva para obtenção da graduação no Curso Tecnólogo em Analise de Sistemas Informatizados da FAETERJ-Rio (Faculdade de Educação Tecnológica do Estado do Rio de Janeiro).
 
-| [DETALHES](#utilizando-coloração-de-grafos-de-interseção-para-resolver-o-problema-de-programação-de-horários-de-exames-em-universidades) | [ORGANIZAÇÃO DO REPOSITÓRIO](#repositório-no-github)  | [CONTATO](#Contato)  |
-| :------------: | :-------------: | :------------: |
+| [DETALHES](#utilizando-coloração-de-grafos-de-interseção-para-resolver-o-problema-de-programação-de-horários-de-exames-em-universidades) | [ORGANIZAÇÃO DO REPOSITÓRIO](#repositório-no-github)  | [CONTATO](#Contato)  |   [APRESENTAÇÃO ONLINE](https://docs.google.com/presentation/d/e/2PACX-1vR8Ys32LFTvC4UPV_KGc2jU4iX4lF8Fw_6YLNIRQJZNb26okTDRtWCVZuqwHNX-nQvWtK2O3BIBQ4GY/pub?start=true&loop=true&delayms=30000)
+| :------------: | :-------------: | :------------: | :------------: |
 
 
 ## Utilizando Coloração de Grafos de Interseção para Resolver o Problema de Programação de Horários de Exames em Universidades
@@ -37,7 +37,7 @@ A **organização do repositório** consiste na existência dos seguintes diret�
 
 3. **FilipeRodrigues _TCC_07.12.2020.pdf:** Consiste na integra do Trabalho de Conclusão de Curso produzido, entregue na data de 07 de Dezembro de 2020.
 
-4. **Apresentação:** Consiste no arquivo com os slides que compuzeram a apresentação de defesa para a banca de avaliação de TCC.
+4. **[Apresentação](https://docs.google.com/presentation/d/e/2PACX-1vR8Ys32LFTvC4UPV_KGc2jU4iX4lF8Fw_6YLNIRQJZNb26okTDRtWCVZuqwHNX-nQvWtK2O3BIBQ4GY/pub?start=true&loop=true&delayms=30000):** Consiste nos slides que compuzeram a apresentação de defesa para a banca de avaliação de TCC, você pode visualizar os slides online através deste [link](https://docs.google.com/presentation/d/e/2PACX-1vR8Ys32LFTvC4UPV_KGc2jU4iX4lF8Fw_6YLNIRQJZNb26okTDRtWCVZuqwHNX-nQvWtK2O3BIBQ4GY/pub?start=true&loop=true&delayms=30000).
 
 ## Contato
 
