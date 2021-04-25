@@ -35,7 +35,7 @@ A **organização do repositório** consiste na existência dos seguintes diret�
 
 2. **Trabalho Escrito - LaTeX:** Consiste no código fonte dos arquivos LaTeX que geraram o arquivo PDF do trabalho escrito desenvolvido, recomenda-se a compilação utilizando o PDFLaTeX, para melhores resultados. 
 
-3. **FilipeRodrigues _TCC_07.12.2020.pdf:** Consiste na integra do Trabalho de Conclusão de Curso produzido, entregue na data de 07 de Dezembro de 2020.
+3. **FilipeRodrigues _TCC_FINAL.pdf:** Consiste na integra do Trabalho de Conclusão de Curso produzido, entregue na data de 07 de Dezembro de 2020 com alterações sugeridas pela banca.
 
 4. **[Apresentação](https://docs.google.com/presentation/d/e/2PACX-1vR8Ys32LFTvC4UPV_KGc2jU4iX4lF8Fw_6YLNIRQJZNb26okTDRtWCVZuqwHNX-nQvWtK2O3BIBQ4GY/pub?start=true&loop=true&delayms=30000):** Consiste nos slides que compuzeram a apresentação de defesa para a banca de avaliação de TCC, você pode visualizar os slides online através deste [link](https://docs.google.com/presentation/d/e/2PACX-1vR8Ys32LFTvC4UPV_KGc2jU4iX4lF8Fw_6YLNIRQJZNb26okTDRtWCVZuqwHNX-nQvWtK2O3BIBQ4GY/pub?start=true&loop=true&delayms=30000).
 
